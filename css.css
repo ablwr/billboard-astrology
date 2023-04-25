@@ -83,9 +83,24 @@ footer {
 }
 
 @media screen and (max-width: 800px) {
+    body {
+        padding: 0em;
+    }
+    #charts section {
+        padding: 0.2em;
+    }
+    #charts section span {
+        font-size: 1em;
+    }
+    #charts section h2 {
+        font-size: 1em;
+    }
     #charts section div {
         padding: 0.5em;
         border: 1px solid silver;
+    }
+    #charts section div p {
+        font-size: 0.5em;
     }
     header {
         padding: 0;

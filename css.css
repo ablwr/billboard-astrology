@@ -1,0 +1,84 @@
+body {
+    height: 100vh;
+    color: lavender;
+    font-family: monospace;
+    background-color: #C1FFFB;
+    background-image: linear-gradient(180deg, rgb(95, 0, 163) 60.00%, rgb(54, 0, 92) 100%);
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    padding: 2em;
+    justify-self: center;
+    align-self: center;
+}
+
+a {
+    color: white;
+}
+
+a:visited {
+    color: silver;
+}
+
+main {
+    justify-self: center;
+    align-self: center;
+    height: 100%;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 0;
+}
+
+#datePicker {
+    padding-top: 1.5em;
+    padding-bottom: 2em;
+    border-bottom: 1px solid silver;
+}
+
+header {
+    text-align: center;
+    padding-bottom: 0.5em;
+}
+
+footer {
+    border-top: 1px solid silver;
+    text-align: center;
+    padding-top: 2em;
+}
+
+#charts {
+    font-size: 1.25em;
+}
+
+#charts section {
+    display: grid;
+    padding: 0.666em;
+    grid-template-columns: 1fr 3fr;
+}
+
+#charts #moon {
+    grid-template-columns: 3fr 1fr;
+}
+
+#moonResults {
+    text-align: right;
+}
+
+#charts section div {
+    padding: 4em;
+    border: 1px solid silver;
+}
+
+@media screen and (max-width: 800px) {
+    #charts section div {
+        padding: 0.5em;
+        border: 1px solid silver;
+    }
+    header {
+        padding: 0;
+    }
+}

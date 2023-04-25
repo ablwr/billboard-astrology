@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>billboard astrology</title>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <meta name="viewport" content="width=device-width">
+    <link href="css.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+<body>
+    <header>
+        <h1>billboard astrology</h1>
+        <tagline>get your musical sun, moon, and rising signs!</tagline>
+        <section id="datePicker">
+            <label>
+            Your birthday:
+            <input type="date" id="date" name="bday" value="2000-01-01" min="1958-08-01" max="2021-11-06" />
+            <input type="submit" id="submit" value="ready!">
+            </label>
+        </section>
+    </header>
+    <main>
+
+        <section id="charts">
+            <section id="sun">
+                <div>
+                    <h2>SUN</h2>
+                </div>
+                <div id="sunResults"></div>
+            </section>
+            <section id="moon">
+                <div id="moonResults"></div>
+                <div>
+                    <h2>MOON</h2>
+                </div>
+            </section>
+            <section id="rising">
+                <div>
+                    <h2>RISING</h2>
+                </div>
+                <div id="risingResults"></div>
+            </section>
+        </section>
+    </main>
+    <footer>Made with 💙 by <a href="https://ashleyblewer.com">Ashley</a> | <a href="https://github.com/ablwr/billboard-astrology">See source on GitHub</a>
+    </footer>
+</body>
+<script src="papaparse.min.js"></script>
+<script src="js.js"></script>
+
+</html>

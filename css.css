@@ -57,11 +57,12 @@ footer {
 #charts section {
     display: grid;
     padding: 0.666em;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 0.75fr 3fr;
 }
 
 #charts #moon {
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 3fr 0.75fr;
+    text-align: right;
 }
 
 #moonResults {
@@ -69,8 +70,16 @@ footer {
 }
 
 #charts section div {
-    padding: 4em;
+    padding: 0.5em;
     border: 1px solid silver;
+}
+
+#charts section span {
+    font-size: 4em;
+}
+
+#charts section div p {
+    font-size: 0.75em;
 }
 
 @media screen and (max-width: 800px) {

@@ -12,6 +12,7 @@ body {
     padding: 2em;
     justify-self: center;
     align-self: center;
+    vertical-align: center;
 }
 
 a {
@@ -23,6 +24,7 @@ a:visited {
 }
 
 main {
+    max-width: 1000px;
     justify-self: center;
     align-self: center;
     height: 100%;
@@ -82,7 +84,7 @@ footer {
     font-size: 0.75em;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 799px) {
     body {
         padding: 0em;
     }

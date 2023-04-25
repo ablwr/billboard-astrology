@@ -38,28 +38,27 @@ function getReading(selectedDate) {
       let sunChart = data.data.find((d) => {
         return d[0].toString() === sun.toISOString().slice(0, 10);
       });
-      console.log(sunChart);
+
       sunResults.innerHTML = `<h3>${sunChart[1]}</h3>${sunChart[2]}`;
 
-      let moon = birthday;
+      let moon = new Date(selectedDate + "T12:00:00");
       moon.setMonth(moon.getMonth() - 9);
       moon = getNextNearestSaturday(moon);
 
       let moonChart = data.data.find((d) => {
         return d[0].toString() === moon.toISOString().slice(0, 10);
       });
-      console.log(moonChart);
+
       moonResults.innerHTML = `<h3>${moonChart[1]}</h3>${moonChart[2]}`;
 
-      let rising = birthday;
+      let rising = new Date(selectedDate + "T12:00:00");
       rising = getNextNearestSaturday(
         rising.setFullYear(rising.getFullYear() + 13)
       );
-
       let risingChart = data.data.find((d) => {
         return d[0].toString() === rising.toISOString().slice(0, 10);
       });
-      console.log(risingChart);
+
       risingResults.innerHTML = `<h3>${risingChart[1]}</h3>${risingChart[2]}`;
     },
   });

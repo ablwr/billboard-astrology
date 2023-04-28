@@ -9,8 +9,17 @@ const date = document.getElementById("date");
 const submit = document.getElementById("submit");
 
 submit?.addEventListener("click", (e) => {
+  window.location.hash = `#${date.value}`;
   getReading(date.value);
 });
+
+if (window.location.hash) {
+  const parsed = window.location.hash.match(/#(?<date>[0-9]{4}-[0-9]{2}-[0-9]{2})/);
+  if (parsed.groups.date !== undefined) {
+    getReading(parsed.groups.date);
+    date.value = parsed.groups.date;
+  }
+}
 
 function getNextNearestSaturday(date) {
   const dateDiff = 6 - new Date(date).getUTCDay();

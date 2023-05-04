@@ -13,12 +13,18 @@ submit?.addEventListener("click", (e) => {
   getReading(date.value);
 });
 
-if (window.location.hash) {
+function doUpdate() {
   const parsed = window.location.hash.match(/#(?<date>[0-9]{4}-[0-9]{2}-[0-9]{2})/);
   if (parsed.groups.date !== undefined) {
     getReading(parsed.groups.date);
     date.value = parsed.groups.date;
   }
+}
+
+window.addEventListener("hashchange", doUpdate)
+
+if (window.location.hash) {
+  doUpdate()
 }
 
 function getNextNearestSaturday(date) {
